@@ -119,6 +119,9 @@ bool equi_stratum_notify(struct stratum_ctx *sctx, json_t *params)
 	size_t coinb1_size, coinb2_size;
 	bool clean, ret = false;
 	int ntime, i, p=0;
+
+	printf("%s \n",params);
+
 	job_id = json_string_value(json_array_get(params, p++));
 	version = json_string_value(json_array_get(params, p++));
 	prevhash = json_string_value(json_array_get(params, p++));
